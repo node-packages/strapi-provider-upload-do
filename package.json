@@ -1,7 +1,7 @@
 {
-  "name": "@strapi/provider-upload-do",
-  "version": "3.6.6",
-  "description": "Digital ocean spaces provider for Strapi upload plugin",
+  "name": "@strapi/provider-digital-ocean-spaces",
+  "version": "1.0.0",
+  "description": "Strapi Provider for Digital Ocean Spaces",
   "homepage": "http://strapi.io",
   "keywords": [
     "upload",
@@ -24,7 +24,7 @@
   "author": {
     "email": "piazzano.stefano@gmail.com",
     "name": "Stefano Piazzano",
-    "url": ""
+    "url": "https://www.linkedin.com/in/stefano-piazzano-183932176?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BGv%2BM6JIiQMaTS3OHdBUMFQ%3D%3D"
   },
   "repository": {
     "type": "git",

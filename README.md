@@ -1,7 +1,9 @@
 # Strapi Upload Provider for Digital Ocean Spaces
-- This provider is a fork of [AdamZikmund's](https://github.com/AdamZikmund) [strapi upload provider](https://github.com/AdamZikmund/strapi-provider-upload-digitalocean) for Digital Ocean spaces.
+- This provider is a fork of  [shorwood/strapi-provider-upload-do](https://github.com/shorwood/strapi-provider-upload-do) for Digital Ocean spaces.
 
-This provider will upload to the space using the AWS S3 API.
+This provider will upload to the space using the AWS S3 API 
+
+![#c5f015] Compatible with version 4 of STRAPI `#c5f015`
 
 ## Parameters
 - **key** : [Space access key](https://cloud.digitalocean.com/account/api/tokens)
@@ -19,20 +21,25 @@ This provider will upload to the space using the AWS S3 API.
 npm i strapi-provider-upload-do
 ```
 
-2. Create config in `./extensions/upload/config/settings.js` with content
+2. Create config in `./config/plugins` with content (create if not exist (plugins.js))
 
 ```
 module.exports = {
-  provider: "do",
-  providerOptions: {
-    key: process.env.DO_SPACE_ACCESS_KEY,
-    secret: process.env.DO_SPACE_SECRET_KEY,
-    endpoint: process.env.DO_SPACE_ENDPOINT,
-    space: process.env.DO_SPACE_BUCKET,
-    directory: process.env.DO_SPACE_DIRECTORY,
-    cdn: process.env.DO_SPACE_CDN,
-  }
-}
+  upload: {
+    config: {
+      provider: "do",
+      providerOptions: {
+        key: process.env.DO_SPACE_ACCESS_KEY,
+        secret: process.env.DO_SPACE_SECRET_KEY,
+        endpoint: process.env.DO_SPACE_ENDPOINT,
+        space: process.env.DO_SPACE_BUCKET,
+        directory: process.env.DO_SPACE_DIRECTORY,
+        cdn: process.env.DO_SPACE_CDN,
+      },
+    },
+  },
+};
+
 ```
 
 3. Create `.env` and add to them 
@@ -63,10 +70,4 @@ Parameter `DO_SPACE_DIRECTORY` and `DO_SPACE_CDN` is optional and you can ommit 
 - [Strapi news on Twitter](https://twitter.com/strapijs)
 - [Strapi docs about upload](https://strapi.io/documentation/3.0.0-beta.x/plugins/upload.html#configuration)
 
-## Contributors
-<a href="https://github.com/AdamZikmund"><img src="https://avatars.githubusercontent.com/u/4062779?v=3" title="AdamZikmund" width="80" height="80"></a>
-<a href="https://github.com/gustawdaniel"><img src="https://avatars.githubusercontent.com/u/16663028?v=3" title="gustawdaniel" width="80" height="80"></a>
-<a href="https://github.com/latenssi"><img src="https://avatars.githubusercontent.com/u/1526792?v=4" title="latenssi" width="80" height="80"></a>
-<a href="https://github.com/malithmcr"><img src="https://avatars.githubusercontent.com/u/4549859?v=4" title="malithmcr" width="80" height="80"></a>
-<a href="https://github.com/tommasongr"><img src="https://avatars.githubusercontent.com/u/25225746?v=4" title="tommasongr" width="80" height="80"></a>
-<a href="https://github.com/maxep"><img src="https://avatars.githubusercontent.com/u/6815992?v=4" title="maxep" width="80" height="80"></a>
+
