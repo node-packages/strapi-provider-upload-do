@@ -15,7 +15,8 @@
   },
   "main": "./lib",
   "dependencies": {
-    "aws-sdk": "2.388.0",
+    "aws-sdk": "^2.1048.0",
+    "package": "^1.0.1",
     "urijs": "^1.19.6"
   },
   "strapi": {

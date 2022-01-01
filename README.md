@@ -3,8 +3,9 @@
 
 This provider will upload to the space using the AWS S3 API 
 
-![#c5f015] Compatible with version 4 of STRAPI `#c5f015`
-
+```diff
+@@ Compatible with version 4 of STRAPI @@
+```
 ## Parameters
 - **key** : [Space access key](https://cloud.digitalocean.com/account/api/tokens)
 - **secret** : [Space access secret](https://cloud.digitalocean.com/account/api/tokens)
