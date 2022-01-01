@@ -4,7 +4,7 @@
 This provider will upload to the space using the AWS S3 API 
 
 ```diff
-@@ Compatible with version 4 of STRAPI @@
++ Compatible with version 4 of STRAPI 
 ```
 ## Parameters
 - **key** : [Space access key](https://cloud.digitalocean.com/account/api/tokens)
@@ -16,10 +16,14 @@ This provider will upload to the space using the AWS S3 API
 
 ## How to use
 
-1. Install this package
+1. Install this package using npm or yarn
 
 ```
-npm i strapi-provider-upload-do
+npm i strapi-provider-upload-dos
+```
+
+```
+yarn strapi-provider-upload-dos
 ```
 
 2. Create config in `./config/plugins` with content (create if not exist (plugins.js))
@@ -59,6 +63,32 @@ with values obtained from tutorial:
 > https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key
 
 Parameter `DO_SPACE_DIRECTORY` and `DO_SPACE_CDN` is optional and you can ommit them both in `.env` and `settings`.
+
+## Modify the CPS roules and define the source
+
+```
+{
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "connect-src": ["'self'", "https:"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "https:",
+          ],
+          "media-src": ["'self'", "data:", "blob:"],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
+
+```
+
 
 ## Resources
 
