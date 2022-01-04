@@ -67,7 +67,7 @@ Parameter `DO_SPACE_DIRECTORY` and `DO_SPACE_CDN` is optional and you can ommit 
 ## Modify the CSP roules and define the source
 
 
-config/middlewares.js
+`config/middlewares.js`
 
 ```
 module.exports = [
