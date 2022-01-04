@@ -4,7 +4,7 @@
 This provider will upload to the space using the AWS S3 API 
 
 ```diff
-+ Compatible with version 4 of STRAPI 
++ Compatible with version 4 of STRAPI (upgraded)
 ```
 ## Parameters
 - **key** : [Space access key](https://cloud.digitalocean.com/account/api/tokens)
@@ -32,7 +32,7 @@ yarn strapi-provider-upload-digital
 module.exports = {
   upload: {
     config: {
-      provider: "do",
+      provider: "strapi-provider-upload-dos",
       providerOptions: {
         key: process.env.DO_SPACE_ACCESS_KEY,
         secret: process.env.DO_SPACE_SECRET_KEY,
@@ -64,10 +64,15 @@ with values obtained from tutorial:
 
 Parameter `DO_SPACE_DIRECTORY` and `DO_SPACE_CDN` is optional and you can ommit them both in `.env` and `settings`.
 
-## Modify the CPS roules and define the source
+## Modify the CSP roules and define the source
+
+
+config/middlewares.js
 
 ```
-{
+module.exports = [
+  "strapi::errors",
+  {
     name: "strapi::security",
     config: {
       contentSecurityPolicy: {
@@ -86,6 +91,14 @@ Parameter `DO_SPACE_DIRECTORY` and `DO_SPACE_CDN` is optional and you can ommit 
       },
     },
   },
+  "strapi::cors",
+  "strapi::poweredBy",
+  "strapi::logger",
+  "strapi::query",
+  "strapi::body",
+  "strapi::favicon",
+  "strapi::public",
+];
 
 ```
 
@@ -99,6 +112,6 @@ Parameter `DO_SPACE_DIRECTORY` and `DO_SPACE_CDN` is optional and you can ommit 
 - [Strapi website](http://strapi.io/)
 - [Strapi community on Slack](http://slack.strapi.io)
 - [Strapi news on Twitter](https://twitter.com/strapijs)
-- [Strapi docs about upload](https://strapi.io/documentation/3.0.0-beta.x/plugins/upload.html#configuration)
+- [Strapi docs about upload](https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html#open-source-contribution)
 
 
