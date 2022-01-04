@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-digital",
-  "version": "4.0.2",
+  "version": "4.0.0",
   "description": "Strapi Provider for Digital Ocean Spaces",
   "homepage": "http://strapi.io",
   "keywords": [
@@ -37,9 +37,6 @@
   "engines": {
     "node": ">= 10.0.0",
     "npm": ">= 6.0.0"
-  },
-  "scripts": {
-    "postinstall": "mv node_modules/strapi-provider-upload-digital node_modules/@strapi"
   },
   "license": "MIT"
 }
