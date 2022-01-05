@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-dos",
-  "version": "4.0.1",
+  "version": "4.0.4",
   "description": "Strapi Provider for Digital Ocean Spaces",
   "homepage": "http://strapi.io",
   "keywords": [
@@ -8,6 +8,7 @@
     "digitalocean",
     "spaces",
     "strapi",
+    "v4",
     "provider"
   ],
   "directories": {

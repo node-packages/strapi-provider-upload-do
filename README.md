@@ -19,11 +19,11 @@ This provider will upload to the space using the AWS S3 API
 1. Install this package using npm or yarn
 
 ```
-npm i strapi-provider-upload-digital
+npm i strapi-provider-upload-dos
 ```
 
 ```
-yarn strapi-provider-upload-digital
+yarn add strapi-provider-upload-dos
 ```
 
 2. Create config in `./config/plugins` with content (create if not exist (plugins.js))
