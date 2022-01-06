@@ -83,7 +83,7 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "https:",
+            "*.digitaloceanspaces.com"
           ],
           "media-src": ["'self'", "data:", "blob:"],
           upgradeInsecureRequests: null,
