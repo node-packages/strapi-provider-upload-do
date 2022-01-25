@@ -110,7 +110,7 @@ module.exports = [
 ## Links
 
 - [Strapi website](http://strapi.io/)
-- [Strapi community on Slack](http://slack.strapi.io)
+- [Strapi community on Discord](http://discord.strapi.io)
 - [Strapi news on Twitter](https://twitter.com/strapijs)
 - [Strapi docs about upload](https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html#open-source-contribution)
 
