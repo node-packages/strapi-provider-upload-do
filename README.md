@@ -1,5 +1,5 @@
 # Strapi Upload Provider for Digital Ocean Spaces
-- This provider is a fork of  [shorwood/strapi-provider-upload-do](https://github.com/shorwood/strapi-provider-upload-do) for Digital Ocean spaces.
+- This provider is a fork of  [s-piazzano/strapi-provider-upload-do](https://github.com/s-piazzano/strapi-provider-upload-do) for Digital Ocean spaces.
 
 This provider will upload to the space using the AWS S3 API 
 
@@ -20,11 +20,11 @@ This provider will upload to the space using the AWS S3 API
 1. Install this package using npm or yarn
 
 ```bash
-npm i strapi-provider-upload-dos
+npm i strapi-provider-upload-dos-s3
 ```
 
 ```bash
-yarn add strapi-provider-upload-dos
+yarn add strapi-provider-upload-dos-s3
 ```
 
 2. Create config in `./config/plugins` with content (create if not exist (plugins.js))
@@ -33,7 +33,7 @@ yarn add strapi-provider-upload-dos
 module.exports = {
   upload: {
     config: {
-      provider: "strapi-provider-upload-dos",
+      provider: "strapi-provider-upload-dos-s3",
       providerOptions: {
         key: process.env.DO_SPACE_ACCESS_KEY,
         secret: process.env.DO_SPACE_SECRET_KEY,
