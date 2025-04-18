@@ -29,7 +29,7 @@ yarn add strapi-provider-upload-dos-s3
 
 2. Create config in `./config/plugins` with content (create if not exist (plugins.js))
 
-```json
+```js
 module.exports = {
   upload: {
     config: {
@@ -72,7 +72,7 @@ Parameter `DO_SPACE_DIRECTORY`, `DO_SPACE_CDN` and `DO_SPACE_HASH` are optional 
 
 `config/middlewares.js`
 
-```javascript
+```js
 module.exports = [
   "strapi::errors",
   {
