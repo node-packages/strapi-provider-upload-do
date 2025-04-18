@@ -123,5 +123,5 @@ docker-entrypoint.sh
 .fleet/
 
 
-.*.test.js
+lib/*.test.js
 .tmp-s3/

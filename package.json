@@ -1,5 +1,5 @@
 {
-  "name": "strapi-provider-upload-digitalocean",
+  "name": "strapi-provider-upload-dos-s3",
   "version": "4.0.5",
   "description": "Strapi Provider for Digital Ocean Spaces",
   "homepage": "http://strapi.io",
