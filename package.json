@@ -23,16 +23,15 @@
     "isProvider": true
   },
   "author": {
-    "email": "piazzano.stefano@gmail.com",
-    "name": "Stefano Piazzano",
-    "url": "https://www.linkedin.com/in/stefano-piazzano-183932176?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BGv%2BM6JIiQMaTS3OHdBUMFQ%3D%3D"
+    "email": "ferronrsmith@gmail.com",
+    "name": "Ferron Smith"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/s-piazzano/strapi-provider-upload-do.git"
+    "url": "git://github.com/node-packages/strapi-provider-upload-do.git"
   },
   "bugs": {
-    "url": "https://github.com/s-piazzano/strapi-provider-upload-do/issues"
+    "url": "https://github.com/node-packages/strapi-provider-upload-do/issues"
   },
   "engines": {
     "node": ">= 10.0.0",
