@@ -1,1 +1,9 @@
-node_modules
+.DS_Store
+node_modules/*
+/nbproject/private/
+package-lock.json
+
+# Intellij
+.idea/
+.fleet/
+.tmp-s3

@@ -11,24 +11,25 @@ This provider will upload to the space using the AWS S3 API
 - **secret** : [Space access secret](https://cloud.digitalocean.com/account/api/tokens)
 - **endpoint** : Base URL of the space (e.g. `fra.digitaloceanspaces.com`)
 - **space** : Name of the space in the Digital Ocean panel.
-- **directory** : Name of the sub-directory you want to store your files in. (Optionnal - e.g. `/example`)
-- **cdn** : CDN Endpoint - URL of the cdn of the space (Optionnal - e.g. `cdn.example.com`)
+- **directory** : Name of the sub-directory you want to store your files in. (Optional - e.g. `/example`)
+- **cdn** : CDN Endpoint - URL of the cdn of the space (Optional - e.g. `cdn.example.com`)
+- **hash** : Configures the hash algorithm that is used for URLs. (Optional - default `md5`)
 
 ## How to use
 
 1. Install this package using npm or yarn
 
-```
+```bash
 npm i strapi-provider-upload-dos
 ```
 
-```
+```bash
 yarn add strapi-provider-upload-dos
 ```
 
 2. Create config in `./config/plugins` with content (create if not exist (plugins.js))
 
-```
+```json
 module.exports = {
   upload: {
     config: {
@@ -40,6 +41,7 @@ module.exports = {
         space: process.env.DO_SPACE_BUCKET,
         directory: process.env.DO_SPACE_DIRECTORY,
         cdn: process.env.DO_SPACE_CDN,
+        hash: process.env.DO_SPACE_HASH
       },
     },
   },
@@ -49,27 +51,28 @@ module.exports = {
 
 3. Create `.env` and add to them 
 
-```
+```bash
 DO_SPACE_ACCESS_KEY
 DO_SPACE_SECRET_KEY
 DO_SPACE_ENDPOINT
 DO_SPACE_BUCKET
 DO_SPACE_DIRECTORY
 DO_SPACE_CDN
+DO_SPACE_HASH
 ```
 
 with values obtained from tutorial:
 
 > https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key
 
-Parameter `DO_SPACE_DIRECTORY` and `DO_SPACE_CDN` is optional and you can ommit them both in `.env` and `settings`.
+Parameter `DO_SPACE_DIRECTORY`, `DO_SPACE_CDN` and `DO_SPACE_HASH` are optional and you can ommit them both in `.env` and `settings`.
 
 ## Modify the CSP roules and define the source
 
 
 `config/middlewares.js`
 
-```
+```javascript
 module.exports = [
   "strapi::errors",
   {

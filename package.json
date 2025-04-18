@@ -1,5 +1,5 @@
 {
-  "name": "strapi-provider-upload-dos",
+  "name": "strapi-provider-upload-digitalocean",
   "version": "4.0.5",
   "description": "Strapi Provider for Digital Ocean Spaces",
   "homepage": "http://strapi.io",
@@ -17,8 +17,7 @@
   "main": "./lib",
   "dependencies": {
     "aws-sdk": "2.892.0",
-    "package": "^1.0.1",
-    "urijs": "^1.19.6"
+    "fast-uri": "^3.0.6"
   },
   "strapi": {
     "isProvider": true
@@ -39,5 +38,11 @@
     "node": ">= 10.0.0",
     "npm": ">= 6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "fs-extra": "^11.3.0",
+    "jest": "^29.7.0",
+    "mock-aws-s3": "^4.0.2"
+  }
 }
